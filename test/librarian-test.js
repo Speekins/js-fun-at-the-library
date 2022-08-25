@@ -6,19 +6,19 @@ var {
 } = require('../src/library.js')
 
 describe('Librarian (class)', function() {
-  it.skip('should instantiate a librarian object', function() {
+  it('should instantiate a librarian object', function() {
     var casey = new Librarian("Casey");
 
     assert.instanceOf(casey, Librarian);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var librarian = new Librarian("Casey");
 
     assert.equal(librarian.name, "Casey");
   });
 
-  it.skip('should be able to have a different name', function() {
+  it('should be able to have a different name', function() {
     var librarian = new Librarian("Scott");
 
     assert.equal(librarian.name, "Scott");
@@ -39,14 +39,14 @@ describe('Librarian (class)', function() {
     assert.deepEqual(librarian.library, library);
   });
 
-  it.skip('should be able to greet a library patron by name', function() {
+  it('should be able to greet a library patron by name', function() {
     var scott = new Librarian("Scott");
 
     assert.equal(scott.greetPatron("Will"), "Hello, Will!");
     assert.equal(scott.greetPatron("Tilly"), "Hello, Tilly!");
   });
 
-  it.skip('should greet a library patron differently if it is morning', function() {
+  it('should greet a library patron differently if it is morning', function() {
     var leta = new Librarian("Leta");
 
     assert.equal(leta.greetPatron("Scott"), "Hello, Scott!");
