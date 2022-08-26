@@ -16,12 +16,19 @@ function unshelfBook(title, shelf) {
 }
 
 function listTitles(shelf) {
-  return shelf.map(object => object.title).join(', ');
+  let titlesOnly = [];
+  for (var idx = 0; idx < shelf.length; idx++) {
+    titlesOnly.push(shelf[idx].title)
+  }
+  return titlesOnly.join(', ');
 }
 
-function searchShelf(shelf, name) {
-let names = shelf.map(book => book.title);
-return names.includes(name);
+function searchShelf(shelf, title) {
+  let titlesOnly = [];
+  for (var idx = 0; idx < shelf.length; idx++) {
+    titlesOnly.push(shelf[idx].title)
+  }
+  return titlesOnly.includes(title);
 }
 
 module.exports = {
